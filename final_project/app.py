@@ -10,8 +10,8 @@ import requests
 from googletrans import Translator
 
 # BrowserStack credentials
-BROWSERSTACK_USERNAME = " "##give the username
-BROWSERSTACK_ACCESS_KEY = " "##give the access key
+BROWSERSTACK_USERNAME = "" #give the username
+BROWSERSTACK_ACCESS_KEY = "" #give the access key
 BROWSERSTACK_URL = f"https://{BROWSERSTACK_USERNAME}:{BROWSERSTACK_ACCESS_KEY}@hub-cloud.browserstack.com/wd/hub"
 
 # Create an 'images' directory if it doesn't exist
@@ -71,9 +71,9 @@ def scrape_el_pais(browser_config):
     try:
         # Navigate to El País Opinion section
         driver.get('https://elpais.com/')
-        WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.LINK_TEXT, "Opinión"))
-        )
+        # WebDriverWait(driver, 10).until(
+        #     EC.presence_of_element_located((By.LINK_TEXT, "Opinión"))
+        # )
 
         # Close any pop-ups or overlays
         try:
